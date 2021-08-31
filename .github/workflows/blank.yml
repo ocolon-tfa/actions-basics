@@ -36,7 +36,7 @@ jobs:
             core.endGroup();
             
             core.startGroup('Env Vars');
-            core.info(JSON.stringify(process.env,null,2);
+            core.info(JSON.stringify(process.env,null,2));
             core.endGroup();
 
       # Runs a single command using the runners shell
