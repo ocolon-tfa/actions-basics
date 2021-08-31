@@ -26,6 +26,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Show context
+        uses: actions/github-script@v4
+        with:
+          script: |
+            console.log(JSON.stringify(conext, null, 2));
+            core.startGroup('Context');
+            core.info(JSON.stringify(conext, null, 2));
+            core.endGroup();
+            
+            core.startGroup('Env Vars');
+            core.info(JSON.stringify(process.env,null,2);
+            core.endGroup();
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, TFA world!
