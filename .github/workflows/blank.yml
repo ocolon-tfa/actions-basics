@@ -30,9 +30,9 @@ jobs:
         uses: actions/github-script@v4
         with:
           script: |
-            console.log(JSON.stringify(conext, null, 2));
+            console.log(JSON.stringify(context, null, 2));
             core.startGroup('Context');
-            core.info(JSON.stringify(conext, null, 2));
+            core.info(JSON.stringify(context, null, 2));
             core.endGroup();
             
             core.startGroup('Env Vars');
