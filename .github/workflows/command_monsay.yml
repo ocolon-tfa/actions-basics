@@ -40,7 +40,7 @@ jobs:
             if (text && text.length > 0) {
               let cleanedText = text.replace(/\r?\n|\r/g, ' ');
 
-              core.info(`Text provided by the user, ${context.actor}, was "${cleanedText}".`);
+              core.info(`Text provided by the user, ${context.actor}, is "${cleanedText}".`);
               core.setOutput('text', encodeURI(cleanedText));
             } else {
               core.info(`No text provided by the user, ${context.actor}`)
